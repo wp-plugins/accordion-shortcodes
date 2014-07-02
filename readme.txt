@@ -5,7 +5,7 @@ Donate Link: http://philbuchanan.com/
 Tags: accordion, accordions, shortcodes
 Requires at least: 3.3
 Tested up to: 3.9
-Stable tag: 1.3
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -126,13 +126,17 @@ There are a few advanced settings you can add to the opening accordion shortcode
 
 **tag**: Set the global HTML tag to use for all accordion titles. Set `tag="h2"` on the opening accordion tag like this: `[accordion tag="h2"]`. Default is `h3`.
 
-You can also set the HTML tag for the titles of each accordion item individually by adding `tag="tagname"` to each `[accordion-item]` shortcode. Make sure to **not** include the angle brackets around the tag name. Example: to use `<h2>` instead of the default `<h3>` tag: `[accordion-item title="Item title" tag="h2"]Item content[/accordion-item]`. Using a tag attribue on an individual accordion item will override the global setting.
+You can also set the HTML tag for the titles of each accordion item individually by adding `tag="tagname"` to each `[accordion-item]` shortcode. Make sure to **not** include the angle brackets around the tag name. Example: to use `<h2>` instead of the default `<h3>` tag: `[accordion-item title="Item title" tag="h2"]Item content[/accordion-item]`. Using a tag attribue on an individual accordion item will override the global setting. The list of valid tags is: h1, h2, h3, h4, h5, h6, p, span and div.
 
 = Issues/Suggestions =
 
 For bug reports or feature requests or if you'd like to contribute to the plugin you can check everything out on [Github](https://github.com/philbuchanan/Accordion-Shortcodes/).
 
 == Changelog ==
+= 1.3.1 =
+* Fixes an issue where an empty tag attribute would break the accordion
+* Tags are now checked against a list of valid HTML tags
+
 = 1.3 =
 * Added global HTML tag setting for accordion item titles
 
@@ -186,6 +190,9 @@ For bug reports or feature requests or if you'd like to contribute to the plugin
 * Initial release
 
 == Upgrade Notice ==
+= 1.3.1 =
+IMPORTANT: Tags are now checked against a list of valid HTML tags. If you use a tag other than h1, h2, h3, h4, h5, h6, p, span or div for your titles, please let me know. You will want to avoid this update until I add your tag to the list. This update also fixes an issue where an empty tag attribute would break the accordion.
+
 = 1.3 =
 Added global HTML tag setting for accordion item titles.
 
